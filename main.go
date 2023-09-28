@@ -18,5 +18,11 @@ func main() {
 	router.GET("/read/:id", func(ctx *gin.Context) {
 		handlers.ReadOne(ctx, client)
 	})
+	router.PUT("/update/:id", func(ctx *gin.Context) {
+		handlers.UpdateOne(ctx, client)
+	})
+	router.DELETE("/delete/:id", func(ctx *gin.Context) {
+		handlers.DeleteOne(ctx, client)
+	})
 	router.Run("localhost:8080")
 }
