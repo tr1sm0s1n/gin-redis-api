@@ -14,6 +14,7 @@ func CreateOne(c *gin.Context, r *redis.Client) {
 	var newCertificate models.Certificate
 
 	if err := c.ShouldBindJSON(&newCertificate); err != nil {
+		log.Println(err)
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": "Bad Request"})
 		return
 	}
@@ -31,6 +32,10 @@ func ReadOne(c *gin.Context, r *redis.Client) {
 	param := c.Param("id")
 
 	oldCertificate := r.HGetAll(context.Background(), param).Val()
+	if len(oldCertificate) == 0 {
+		c.AbortWithStatusJSON(http.StatusNotFound, gin.H{"message": "Not Found"})
+		return
+	}
 	c.IndentedJSON(http.StatusOK, oldCertificate)
 }
 
@@ -39,6 +44,7 @@ func UpdateOne(c *gin.Context, r *redis.Client) {
 	param := c.Param("id")
 
 	if err := c.ShouldBindJSON(&update); err != nil {
+		log.Println(err)
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": "Bad Request"})
 		return
 	}
@@ -55,11 +61,17 @@ func UpdateOne(c *gin.Context, r *redis.Client) {
 func DeleteOne(c *gin.Context, r *redis.Client) {
 	param := c.Param("id")
 
+	oldCertificate := r.HGetAll(context.Background(), param).Val()
+	if len(oldCertificate) == 0 {
+		c.AbortWithStatusJSON(http.StatusNotFound, gin.H{"message": "Not Found"})
+		return
+	}
+
 	if err := r.HDel(context.Background(), param, "id", "name", "course", "grade", "date").Err(); err != nil {
 		log.Println(err)
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal Server Error"})
 		return
 	}
 
-	c.IndentedJSON(http.StatusOK, gin.H{"message": "Deleted ID: " + param})
+	c.IndentedJSON(http.StatusOK, gin.H{"message": "Deleted Successfully"})
 }
