@@ -23,7 +23,7 @@ cd gin-redis-api
 Start the database
 
 ```bash
-docker compose up -d
+make up
 ```
 
 Open [browser](http://localhost:8001) to view the database (see ./config for the credentials)
@@ -31,7 +31,7 @@ Open [browser](http://localhost:8001) to view the database (see ./config for the
 Start the application
 
 ```bash
-go run .
+make run
 ```
 
 For live reload, install Air (optional)
@@ -43,5 +43,17 @@ go install github.com/cosmtrek/air@latest
 Run the application with Air
 
 ```bash
-air
+make air
 ```
+
+## 📜 License
+
+Click [here](./LICENSE.md).
+
+## 🎗️ Contributing
+
+Click [here](./CONTRIBUTING.md).
+
+## ⚖️ Code of Conduct
+
+Click [here](./CODE_OF_CONDUCT.md).
