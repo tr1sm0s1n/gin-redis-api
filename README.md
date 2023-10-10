@@ -7,7 +7,7 @@ Gin API for CRUD operations in Redis.
 ![Go](https://img.shields.io/badge/go-2F4F4F?style=for-the-badge&logo=go)
 ![Gin](https://img.shields.io/badge/gin-2F4F4F?style=for-the-badge&logo=go)
 ![Redis](https://img.shields.io/badge/redis-2F4F4F?style=for-the-badge&logo=redis)
-![Static Badge](https://img.shields.io/badge/docker-2F4F4F?style=for-the-badge&logo=docker)
+![Docker](https://img.shields.io/badge/docker-2F4F4F?style=for-the-badge&logo=docker)
 
 ## ⚙️ Run Locally
 

@@ -1,3 +1,5 @@
+BIN_LOC=bin/gin-mongo-api
+
 build:
 	docker compose build
 
@@ -8,10 +10,10 @@ down:
 	docker compose down
 
 compile:
-	go build -o bin/gin-redis-api
+	go build -o ${BIN_LOC} main.go
 
 start:
-	./gin-redis-api
+	./${BIN_LOC}
 
 run:
 	go run .
