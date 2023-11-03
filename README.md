@@ -4,17 +4,17 @@ Gin API for CRUD operations in Redis.
 
 ## 🛠 Built With
 
-![Go](https://img.shields.io/badge/go-2F4F4F?style=for-the-badge&logo=go)
-![Gin](https://img.shields.io/badge/gin-2F4F4F?style=for-the-badge&logo=go)
-![Redis](https://img.shields.io/badge/redis-2F4F4F?style=for-the-badge&logo=redis)
-![Docker](https://img.shields.io/badge/docker-2F4F4F?style=for-the-badge&logo=docker)
+[![Go](https://img.shields.io/badge/go-dodgerblue?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
+[![Gin](https://img.shields.io/badge/gin-dodgerblue?style=for-the-badge&logo=go&logoColor=white)](https://gin-gonic.com/)
+[![Redis](https://img.shields.io/badge/redis-crimson?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
+[![Docker](https://img.shields.io/badge/docker-navy?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
 ## ⚙️ Run Locally
 
 Clone the project
 
 ```bash
-git clone https://github.com/DEMYSTIF/gin-redis-api.git
+git clone https://github.com/tr1sm0s1n/gin-redis-api.git
 cd gin-redis-api
 ```
 
