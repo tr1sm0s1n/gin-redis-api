@@ -1,4 +1,4 @@
-module github.com/DEMYSTIF/gin-redis-api
+module github.com/tr1sm0s1n/gin-redis-api
 
 go 1.21.1
 

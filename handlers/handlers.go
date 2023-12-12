@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/DEMYSTIF/gin-redis-api/models"
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
+	"github.com/tr1sm0s1n/gin-redis-api/models"
 )
 
 func CreateOne(c *gin.Context, r *redis.Client) {

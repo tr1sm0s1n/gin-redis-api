@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/DEMYSTIF/gin-redis-api/config"
-	"github.com/DEMYSTIF/gin-redis-api/handlers"
-	"github.com/DEMYSTIF/gin-redis-api/middlewares"
 	"github.com/gin-gonic/gin"
+	"github.com/tr1sm0s1n/gin-redis-api/config"
+	"github.com/tr1sm0s1n/gin-redis-api/handlers"
+	"github.com/tr1sm0s1n/gin-redis-api/middlewares"
 )
 
 func main() {
