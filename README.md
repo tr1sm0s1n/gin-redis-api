@@ -35,13 +35,13 @@ make run
 For live reload, install Air (optional)
 
 ```bash
-go install github.com/cosmtrek/air@latest
+make air
 ```
 
 Run the application with Air
 
 ```bash
-make air
+make dev
 ```
 
 ## 📜 License
