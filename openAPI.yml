@@ -178,10 +178,10 @@ components:
       properties:
         id:
           type: string
-          example: 75
+          example: "75"
         name:
           type: string
-          example: Eirene
+          example: Jelena
         course:
           type: string
           example: MBCC
@@ -191,7 +191,7 @@ components:
         date:
           type: string
           format: date
-          example: "2023-10-01"
+          example: "2025-02-01"
     DeleteResponse:
       type: object
       properties:
