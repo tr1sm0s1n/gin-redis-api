@@ -7,6 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
+	"github.com/tr1sm0s1n/gin-redis-api/middlewares"
 	"github.com/tr1sm0s1n/gin-redis-api/models"
 )
 
@@ -23,6 +24,10 @@ func CreateOne(c *gin.Context, r *redis.Client) {
 		log.Println(err)
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal Server Error"})
 		return
+	}
+
+	if err := middlewares.Pub(r, newCertificate); err != nil {
+		log.Println(err)
 	}
 
 	c.IndentedJSON(http.StatusCreated, newCertificate)
@@ -53,6 +58,10 @@ func UpdateOne(c *gin.Context, r *redis.Client) {
 		log.Println(err)
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal Server Error"})
 		return
+	}
+
+	if err := middlewares.Pub(r, update); err != nil {
+		log.Println(err)
 	}
 
 	c.IndentedJSON(http.StatusOK, update)

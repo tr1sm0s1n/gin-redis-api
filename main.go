@@ -9,6 +9,7 @@ import (
 
 func main() {
 	client := config.ConnectRedis()
+	go middlewares.Sub(client)
 
 	router := gin.Default()
 	router.Use(middlewares.Authority())
